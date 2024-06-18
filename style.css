@@ -1,0 +1,101 @@
+body {
+  display: flex;
+}
+
+.check-list {
+  margin: 50px auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 68px;
+  padding: 0 18px;
+  max-width: 743px;
+  height: 91px;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  background: #3579f5;
+  border-radius: 10px;
+}
+
+.check-list_content {
+  display: flex;
+  gap: 16px;
+}
+
+.check-list_progress-bar {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 4px;
+  width: 60px;
+  height: 61px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  stroke-width: 1px;
+  stroke: rgba(255, 255, 255, 0.5);
+  background-repeat: no-repeat;
+  background-position: 0;
+}
+
+.check-list_progress-bar__1 {
+  background-image: url("./assets/progress-1.svg");
+}
+
+.check-list_progress-bar__2 {
+  background-image: url("./assets/progress-2.svg");
+}
+
+.check-list_description {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.check-list_tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  border-radius: 40px;
+  width: 76px;
+  height: 18px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  background: #2364db;
+}
+
+.check-list_title {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 133%;
+}
+
+.check-list_text {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  letter-spacing: 0.35px;
+}
+
+.check-list_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  padding: 10px 30px;
+  height: 40px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  color: #4777ed;
+  background: #f4f8ff;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
