@@ -3,6 +3,7 @@ body {
 }
 
 .check-list {
+  /* Сделал отступы чтобы было удобнее смотреть */
   margin: 50px auto;
 
   display: flex;
@@ -34,18 +35,36 @@ body {
   font-weight: 400;
   font-size: 20px;
   line-height: 150%;
-  stroke-width: 1px;
-  stroke: rgba(255, 255, 255, 0.5);
-  background-repeat: no-repeat;
-  background-position: 0;
 }
 
-.check-list_progress-bar__1 {
-  background-image: url("./assets/progress-1.svg");
+.circular-progress {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  fill: none;
+  --size: 60px;
+  --half-size: calc(var(--size) / 2);
+  --stroke-width: 2px;
+  --radius: calc((var(--size) - var(--stroke-width)) / 2);
+  --circumference: calc(var(--radius) * pi * 2);
+  --dash: calc((var(--progress) * var(--circumference)) / 100);
 }
 
-.check-list_progress-bar__2 {
-  background-image: url("./assets/progress-2.svg");
+.circular-progress circle {
+  cx: var(--half-size);
+  cy: var(--half-size);
+  r: var(--radius);
+  fill: none;
+  stroke-linecap: round;
+  stroke-opacity: 0.5;
+  stroke: #ffffff;
+}
+
+.circular-progress circle.progress {
+  stroke-width: var(--stroke-width);
+  transform-origin: var(--half-size) var(--half-size);
+  stroke-dasharray: var(--dash) calc(var(--circumference) - var(--dash));
+  transform: rotate(-90deg);
 }
 
 .check-list_description {
@@ -98,4 +117,10 @@ body {
   border-radius: 6px;
   border: none;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.check-list_button:hover {
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.5);
+  transform: translateY(-3px);
 }

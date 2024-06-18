@@ -10,14 +10,25 @@
   <body>
     <div class="check-list">
       <div class="check-list_content">
-        <div class="check-list_progress-bar check-list_progress-bar__1">0/7</div>
+        <div class="check-list_progress-bar">
+          <!-- Переменная "--progress" задаёт прогресс в процентах. Вынес svg в html чтобы можно было управлять переменной через JavaScript -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="circular-progress"
+            style="--progress: 3"
+          >
+            <circle />
+            <circle class="progress" />
+          </svg>
+          0/7
+        </div>
         <div class="check-list_description">
-            <div class="check-list_tag">Чеклист</div>
-            <div class="check-list_title">Выполнено: 0 из 7 действий</div>
-            <div class="check-list_text">
-              Следующее действие: Созвониться с клиентом до 23.05.24 12:00
-            </div>
-        </div>        
+          <div class="check-list_tag">Чеклист</div>
+          <div class="check-list_title">Выполнено: 0 из 7 действий</div>
+          <div class="check-list_text">
+            Следующее действие: Созвониться с клиентом до 23.05.24 12:00
+          </div>
+        </div>
       </div>
       <button class="check-list_button">Открыть чеклист</button>
     </div>
